@@ -1,0 +1,13 @@
+$zip = Join-Path $env:USERPROFILE "Downloads\gradle-9.3.1-all.zip"
+Test-Path $zip
+
+$zipUrl = ([System.Uri]$zip).AbsoluteUri
+
+$file = "android/gradle/wrapper/gradle-wrapper.properties"
+
+$content = Get-Content $file -Raw
+
+$content = $content -replace '(?m)^distributionUrl=.*$', "distributionUrl=$zipUrl"
+
+Set-Content -Path $file -Value $content -NoNewline
+
