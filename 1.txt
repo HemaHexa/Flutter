@@ -14,3 +14,35 @@ PS C:\FlutterProjects\flutter_application_1>
       To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
     • Java version OpenJDK Runtime Environment (build 25.0.4+-16339643-b508.27)
     • All Android licenses accepted.
+
+
+! Doctor found issues in 1 category.
+PS C:\FlutterProjects\flutter_application_1> Invoke-WebRequest -Uri "https://services.gradle.org/distributions/gradle-9.3.1-all.zip" -Method Head
+
+Security Warning: Script Execution Risk
+Invoke-WebRequest parses the content of the web page. Script code in the web page might be run when the page is 
+parsed.
+      RECOMMENDED ACTION:
+      Use the -UseBasicParsing switch to avoid script code execution.
+
+      Do you want to continue?
+    
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    x-ms-request-id: 3baad8df-c01e-0025-0a2c-914829000000
+                    x-ms-version: 2018-11-09
+                    x-ms-creation-time: Thu, 29 Jan 2026 14:29:37 GMT
+                    x-ms-lease-status: unlocked...
+Headers           : {[Connection, keep-alive], [x-ms-request-id, 3baad8df-c01e-0025-0a2c-914829000000], [x-ms-version, 
+                    2018-11-09], [x-ms-creation-time, Thu, 29 Jan 2026 14:29:37 GMT]...}
+RawContentLength  : 0
+
+
+
+PS C:\FlutterProjects\flutter_application_1> 
