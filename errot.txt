@@ -1,0 +1,142 @@
+Error: Unable to find suitable Visual Studio toolchain. Please run `flutter doctor` for more details.
+PS C:\FlutterProjects\flutter_application_1> flutter run
+Connected devices:
+Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.26200.9711]
+Chrome (web)      • chrome  • web-javascript • Google Chrome 156.0.8078.79
+Edge (web)        • edge    • web-javascript • Microsoft Edge 156.0.4314.50
+[1]: Windows (windows)
+[2]: Chrome (chrome)
+[3]: Edge (edge)
+Please choose one (or "q" to quit): 2
+Launching lib\main.dart on Chrome in debug mode...
+lib/screens/welcome_screen.dart:14:7: Error: Expected a class member, but got ')'.
+ ])))));
+      ^
+lib/screens/welcome_screen.dart:14:8: Error: Expected a class member, but got ';'.
+ ])))));
+       ^
+lib/widgets/portfolio_card.dart:6:79: Error: Expected an identifier, but got '\'.
+Try inserting an identifier before '\'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                              ^
+lib/widgets/portfolio_card.dart:6:80: Error: Expected ',' before this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                               ^
+lib/widgets/portfolio_card.dart:6:83: Error: Expected an identifier, but got '?'.
+Try inserting an identifier before '?'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                  ^
+lib/widgets/portfolio_card.dart:6:84: Error: Expected an identifier, but got '='.
+Try inserting an identifier before '='.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                   ^
+lib/widgets/portfolio_card.dart:6:86: Error: Expected an identifier, but got '\'.
+Try inserting an identifier before '\'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                     ^
+lib/widgets/portfolio_card.dart:6:87: Error: Expected ')' before this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                      ^
+lib/widgets/portfolio_card.dart:6:94: Error: Expected an identifier, but got '?'.
+Try inserting an identifier before '?'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                             ^
+lib/widgets/portfolio_card.dart:6:96: Error: Expected an identifier, but got '\'.
+Try inserting an identifier before '\'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                               ^
+lib/widgets/portfolio_card.dart:6:97: Error: Expected ':' before this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                ^
+lib/widgets/portfolio_card.dart:6:99: Error: Expected ':' before this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                  ^
+lib/widgets/portfolio_card.dart:6:99: Error: Expected an identifier, but got ')'.
+Try inserting an identifier before ')'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                  ^
+lib/widgets/portfolio_card.dart:6:100: Error: Expected a class member, but got ''),(m)=>''.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                   ^^^^^^^^^
+lib/widgets/portfolio_card.dart:6:109: Error: Expected a class member, but got '\'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                            ^
+lib/widgets/portfolio_card.dart:6:115: Error: A method declaration needs an explicit list of parameters.
+Try adding a parameter list to the method declaration.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                                  ^
+lib/widgets/portfolio_card.dart:6:122: Error: Expected a class member, but got ','.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                                         ^
+lib/widgets/portfolio_card.dart:6:123: Error: Expected a class member, but got '')}''.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                                          ^^^^
+lib/widgets/portfolio_card.dart:6:127: Error: Expected a class member, but got ';'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                                              ^
+lib/screens/welcome_screen.dart:8:168: Error: Member not found: 'chart_line_uptrend_xyaxis'.
+ const
+ Spacer(),Container(width:66,height:66,decoration:BoxDecoration(color:AppColors.softBlue,borderRadius:BorderRadius.circular(20)),child:cons
+ t Icon(CupertinoIcons.chart_line_uptrend_xyaxis,color:AppColors.blue,size:34)),
+                                                                                                                                 ^^^^^^^^^^
+                                                                                                                                 ^^^^^^^^^^
+                                                                                                                                 ^^^^^
+lib/screens/welcome_screen.dart:14:6: Error: Expected ';' after this.
+ ])))));
+     ^
+lib/screens/chat_screen.dart:23:242: Error: Member not found: 'chart_line_uptrend_xyaxis'.
+ @override Widget build(BuildContext
+ context)=>Scaffold(appBar:AppBar(title:Row(children:[Container(width:34,height:34,decoration:BoxDecoration(color:AppColors.softBlue,border
+ Radius:BorderRadius.circular(11)),child:const Icon(CupertinoIcons.chart_line_uptrend_xyaxis,color:AppColors.blue,size:19)),const
+ SizedBox(width:10),const
+ Column(crossAxisAlignment:CrossAxisAlignment.start,children:[Text('InvestMate',style:TextStyle(fontSize:16,fontWeight:FontWeight.w800,colo
+ r:AppColors.navy)),Text('Your investment
+ assistant',style:TextStyle(fontSize:10,color:AppColors.slate))])]),actions:[IconButton(onPressed:reset,tooltip:'New
+ conversation',icon:const
+ Icon(CupertinoIcons.square_pencil))]),body:SafeArea(top:false,child:Column(children:[Expanded(child:messages.isEmpty?intro():conversation(
+ )),composer()])));
+                                                                                                                                 ^^^^^^^^^^
+                                                                                                                                 ^^^^^^^^^^
+                                                                                                                                 ^^^^^
+lib/widgets/portfolio_card.dart:6:97: Error: Expected ')' before this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                ^
+lib/widgets/portfolio_card.dart:6:99: Error: Expected ';' after this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                  ^
+lib/widgets/portfolio_card.dart:6:80: Error: The getter 'd' isn't defined for the type 'PortfolioCard'.
+ - 'PortfolioCard' is from 'package:flutter_application_1/widgets/portfolio_card.dart' ('lib/widgets/portfolio_card.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'd'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                               ^
+lib/widgets/portfolio_card.dart:6:78: Error: The method 'call' isn't defined for the type 'String'.
+Try correcting the name to the name of an existing method, or defining a method named 'call'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                             ^
+lib/widgets/portfolio_card.dart:6:120: Error: Expected ';' after this.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                                       ^
+lib/widgets/portfolio_card.dart:6:117: Error: The getter 'm' isn't defined for the type 'PortfolioCard'.
+ - 'PortfolioCard' is from 'package:flutter_application_1/widgets/portfolio_card.dart' ('lib/widgets/portfolio_card.dart').
+Try correcting the name to the name of an existing getter, or defining a getter or field named 'm'.
+ String money(double n)=>'₹\${n.toStringAsFixed(0).replaceAllMapped(RegExp(r'(\d)(?=(\d{3})+(?!\d))'),(m)=>'\void ${m[1]},')}';
+                                                                                                                    ^
+Waiting for connection from debug service on Chrome...             49.4s
+Failed to compile application.
+PS C:\FlutterProjects\flutter_application_1> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
