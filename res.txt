@@ -1,0 +1,83 @@
+PS C:\FlutterProjects\flutter_application_1> flutter clean
+Deleting build...                                                   39ms
+Failed to remove C:\FlutterProjects\flutter_application_1\.dart_tool. A program may still be using a file in the
+directory or the directory itself. To find and stop such a program, see:
+https://superuser.com/questions/1333118/cant-delete-empty-folder-because-it-is-used
+Deleting .dart_tool...                                           1,629ms
+Failed to remove C:\FlutterProjects\flutter_application_1\ios\Flutter\ephemeral. A program may still be using a file in
+the directory or the directory itself. To find and stop such a program, see:
+https://superuser.com/questions/1333118/cant-delete-empty-folder-because-it-is-used
+Deleting ephemeral...                                            1,615ms
+Deleting Generated.xcconfig...                                       3ms
+Deleting flutter_export_environment.sh...                            3ms
+Deleting ephemeral...                                                6ms
+Failed to remove C:\FlutterProjects\flutter_application_1\macos\Flutter\ephemeral. A program may still be using a file
+in the directory or the directory itself. To find and stop such a program, see:
+https://superuser.com/questions/1333118/cant-delete-empty-folder-because-it-is-used
+Deleting ephemeral...                                            1,597ms
+Deleting ephemeral...                                                8ms
+PS C:\FlutterProjects\flutter_application_1> flutter pub get
+Resolving dependencies... 
+Downloading packages... 
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.0 (2.4.4 available)
+Got dependencies!
+5 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+PS C:\FlutterProjects\flutter_application_1> flutter run
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/2000209446/.gradle/wrapper/dists/gradle-9.3.1-all/5rhaihjnf6vskz2q8rx0eetfc/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Checking the license for package Android SDK Platform 36 in C:\Users\2000209446\AppData\Local\Android\Sdk\licenses
+License for package Android SDK Platform 36 accepted.
+Preparing "Install Android SDK Platform 36 (revision 2)".
+"Install Android SDK Platform 36 (revision 2)" ready.
+Installing Android SDK Platform 36 in C:\Users\2000209446\AppData\Local\Android\Sdk\platforms\android-36
+"Install Android SDK Platform 36 (revision 2)" complete.
+"Install Android SDK Platform 36 (revision 2)" finished.
+[=========                              ] 25%                                   
+Running Gradle task 'assembleDebug'...                            386.0s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...          10.1s
+I/FlutterActivityAndFragmentDelegate( 9884): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI( 9884): Beginning load of flutter...
+D/FlutterJNI( 9884): flutter (null) was loaded normally!
+I/flutter ( 9884): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 9884): Width is zero. 0,0
+Syncing files to device sdk gphone64 x86 64...                     225ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:64078/aixqlhIGNvA=/
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at:
+http://127.0.0.1:64078/aixqlhIGNvA=/devtools/?uri=ws://127.0.0.1:64078/aixqlhIGNvA=/ws
+D/ProfileInstaller( 9884): Installing profile for com.example.flutter_application_1
+I/Choreographer( 9884): Skipped 422 frames!  The application may be doing too much work on its main thread.
+D/WindowOnBackDispatcher( 9884): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@d6f60d
+I/WindowExtensionsImpl( 9884): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils( 9884): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@caef6d9, of which baseContext=android.app.ContextImpl@f9cd196
+I/r_application_1( 9884): Compiler allocated 5250KB to compile void android.view.ViewRootImpl.performTraversals(long)
+D/VRI[MainActivity]( 9884): WindowInsets changed: 1080x2400 statusBars:[0,132,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,164,0,84] 
+D/FlutterRenderer( 9884): Width is zero. 0,0
+I/Surface ( 9884): Creating surface for consumer unnamed-9884-0 with slotExpansion=1 for 64 slots
+I/Surface ( 9884): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI( 9884): Sending viewport metrics to the engine.
+I/Surface ( 9884): Creating surface for consumer unnamed-9884-1 with slotExpansion=1 for 64 slots
+I/Surface ( 9884): Creating surface for consumer 723b49c SurfaceView[com.example.flutter_application_1/com.example.flutter_application_1.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/Choreographer( 9884): Skipped 169 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI( 9884): Sending viewport metrics to the engine.
+D/WindowLayoutComponentImpl( 9884): Register WindowLayoutInfoListener on Context=com.example.flutter_application_1.MainActivity@edf027a, of which baseContext=android.app.ContextImpl@e3a7e07
+D/FlutterJNI( 9884): Sending viewport metrics to the engine.
+I/HWUI    ( 9884): Davey! duration=938ms; Flags=1, FrameTimelineVsyncId=45810, IntendedVsync=8319108478360, Vsync=8319208478356, InputEventId=0, HandleInputStart=8319219102400, AnimationStart=8319220349000, PerformTraversalsStart=8319220477100, DrawStart=8319234998200, FrameDeadline=8319125145026, FrameStartTime=8319215958500, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=8319208478356, SyncQueued=8319253318500, SyncStart=8319256351300, IssueDrawCommandsStart=8319260949500, SwapBuffers=8319377509600, FrameCompleted=8320050485100, DequeueBufferDuration=25675100, QueueBufferDuration=1035500, GpuCompleted=8320047567300, SwapBuffersCompleted=8320050485100, DisplayPresentTime=0, CommandSubmissionCompleted=8319377509600, 
