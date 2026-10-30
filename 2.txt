@@ -1,0 +1,56 @@
+PS C:\FlutterProjects\flutter_application_1> $zip = Join-Path $env:USERPROFILE "Downloads\gradle-9.3.1-all.zip"
+>> Test-Path $zip
+True
+PS C:\FlutterProjects\flutter_application_1> 
+>> $zipUrl = ([System.Uri]$zip).AbsoluteUri
+PS C:\FlutterProjects\flutter_application_1> $file = "android/gradle/wrapper/gradle-wrapper.properties"
+PS C:\FlutterProjects\flutter_application_1> $content = Get-Content $file -Raw
+PS C:\FlutterProjects\flutter_application_1> $content = $content -replace '(?m)^distributionUrl=.*$', "distributionUrl=$zipUrl"
+PS C:\FlutterProjects\flutter_application_1> Set-Content -Path $file -Value $content -NoNewline
+PS C:\FlutterProjects\flutter_application_1> flutter run
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/2000209446/.gradle/wrapper/dists/gradle-9.3.1-all/5rhaihjnf6vskz2q8rx0eetfc/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+
+Downloading Android CLI...
+Unpacking embedded installation...
+
+Terms of Service and License Agreement for the Android Software Development Kit
+
+https://developer.android.com/studio/terms
+
+Google collects usage data for the Android CLI, such as commands, sub-commands, and flags used. This data does not include custom parameters or identifiable information. This information helps improve the tool and is collected in accordance with Google's Privacy Policy.
+
+https://policies.google.com/privacy
+
+Disable Android CLI metrics collection by using the --no-metrics flag.
+
+Tip: For the best experience using Android CLI with agents, we strongly recommend running android init to install the necessary skills and resources.
+Package ndk not found.
+Package 28.2.13676358 not found.
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file 'C:\FlutterProjects\flutter_application_1\android\build.gradle.kts' line: 19
+
+* What went wrong:
+A problem occurred configuring project ':app'.
+> org.gradle.api.GradleException: Android sdkmanager did not install NDK 28.2.13676358 into C:\Users\2000209446\AppData\Local\Android\sdk.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10m 36s
+Running Gradle task 'assembleDebug'...                            637.7s
+Error: Gradle task assembleDebug failed with exit code 1
+PS C:\FlutterProjects\flutter_application_1> 
