@@ -46,3 +46,29 @@ RawContentLength  : 0
 
 
 PS C:\FlutterProjects\flutter_application_1> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\FlutterProjects\flutter_application_1> & "C:Program Files\Android\Android Studio1\jbr\bin\keytool.exe" -list -cacerts -storepass changeit
+& : The term 'C:Program Files\Android\Android Studio1\jbr\bin\keytool.exe' is not recognized as the name of a cmdlet, 
+function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the 
+path is correct and try again.
+At line:1 char:3
++ & "C:Program Files\Android\Android Studio1\jbr\bin\keytool.exe" -list ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:Program Files...bin\keytool.exe:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\FlutterProjects\flutter_application_1> 
