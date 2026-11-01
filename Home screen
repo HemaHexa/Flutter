@@ -1,0 +1,438 @@
+import 'package:flutter/material.dart';
+
+import '../../core/theme/app_colors.dart';
+import '../../data/mock_data.dart';
+import '../../widgets/investment_tile.dart';
+import '../investment_details/investment_details_screen.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFFF4F8F9),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Header
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Good morning,',
+                        style: TextStyle(
+                          color: Color(0xFF65758B),
+                          fontSize: 14,
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      const Text(
+                        'Investor 👋',
+                        style: TextStyle(
+                          color: Color(0xFF183B48),
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    height: 46,
+                    width: 46,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      border: Border.all(color: AppColors.border),
+                    ),
+                    child: const Icon(
+                      Icons.notifications_none_rounded,
+                      color: Color(0xFF183B48),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 25),
+
+              // Portfolio value card
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(22),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color(0xFF183B48),
+                      Color(0xFF24616A),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Total Portfolio Value',
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    const Text(
+                      '₹2,87,250',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 15),
+                    Row(
+                      children: [
+                        const Icon(
+                          Icons.trending_up_rounded,
+                          color: Color(0xFFA6DCD5),
+                          size: 20,
+                        ),
+                        const SizedBox(width: 6),
+                        const Text(
+                          '+₹12,840  (+4.68%)',
+                          style: TextStyle(
+                            color: Color(0xFFA6DCD5),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                        ),
+                        const Spacer(),
+                        const Text(
+                          'Overall Returns',
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 25),
+
+              // Overview heading
+              const Text(
+                'Portfolio Overview',
+                style: TextStyle(
+                  color: Color(0xFF183B48),
+                  fontSize: 19,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              // Overview cards
+              Row(
+                children: [
+                  Expanded(
+                    child: _OverviewCard(
+                      title: 'Invested',
+                      amount: '₹2,74,410',
+                      icon: Icons.account_balance_wallet_outlined,
+                      iconColor: const Color(0xFF356AC3),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _OverviewCard(
+                      title: "Today's P&L",
+                      amount: '+₹1,240',
+                      icon: Icons.trending_up_rounded,
+                      iconColor: const Color(0xFF159A91),
+                      amountColor: const Color(0xFF159A91),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 25),
+
+              // Asset allocation
+              const Text(
+                'Your Investments',
+                style: TextStyle(
+                  color: Color(0xFF183B48),
+                  fontSize: 19,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              Row(
+                children: [
+                  Expanded(
+                    child: _AssetCard(
+                      title: 'Stocks',
+                      amount: '₹1.39L',
+                      percentage: '52%',
+                      icon: Icons.show_chart_rounded,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _AssetCard(
+                      title: 'Mutual Funds',
+                      amount: '₹76.8K',
+                      percentage: '28%',
+                      icon: Icons.pie_chart_outline_rounded,
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 25),
+
+              // Investment list heading
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Top Investments',
+                    style: TextStyle(
+                      color: Color(0xFF183B48),
+                      fontSize: 19,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'View all',
+                    style: TextStyle(
+                      color: const Color(0xFF159A91),
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 15),
+
+              // Investment list
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: AppColors.border),
+                ),
+                child: Column(
+                  children: mockInvestments.take(3).map((item) {
+                    return InvestmentTile(
+                      investment: item,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                InvestmentDetailsScreen(
+                              investment: item,
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+              ),
+
+              const SizedBox(height: 23),
+
+              // AI insight card
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFE9F5F3),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: const Color(0xFFD2EAE5),
+                  ),
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 42,
+                      width: 42,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF159A91).withValues(alpha: 0.12),
+                        borderRadius: BorderRadius.circular(13),
+                      ),
+                      child: const Icon(
+                        Icons.auto_awesome_rounded,
+                        color: Color(0xFF159A91),
+                      ),
+                    ),
+                    const SizedBox(width: 13),
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Your AI Investment Insight',
+                            style: TextStyle(
+                              color: Color(0xFF183B48),
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 7),
+                          Text(
+                            'Your portfolio is showing positive growth. '
+                            'Consider reviewing your asset allocation '
+                            'to maintain a balanced investment strategy.',
+                            style: TextStyle(
+                              color: Color(0xFF65758B),
+                              fontSize: 13,
+                              height: 1.5,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 25),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// Overview card
+class _OverviewCard extends StatelessWidget {
+  final String title;
+  final String amount;
+  final IconData icon;
+  final Color iconColor;
+  final Color amountColor;
+
+  const _OverviewCard({
+    required this.title,
+    required this.amount,
+    required this.icon,
+    required this.iconColor,
+    this.amountColor = const Color(0xFF183B48),
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(icon, color: iconColor, size: 23),
+          const SizedBox(height: 13),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Color(0xFF65758B),
+              fontSize: 12,
+            ),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            amount,
+            style: TextStyle(
+              color: amountColor,
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// Asset card
+class _AssetCard extends StatelessWidget {
+  final String title;
+  final String amount;
+  final String percentage;
+  final IconData icon;
+
+  const _AssetCard({
+    required this.title,
+    required this.amount,
+    required this.percentage,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: AppColors.border),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            icon,
+            color: const Color(0xFF159A91),
+            size: 23,
+          ),
+          const SizedBox(height: 12),
+          Text(
+            title,
+            style: const TextStyle(
+              color: Color(0xFF65758B),
+              fontSize: 12,
+            ),
+          ),
+          const SizedBox(height: 5),
+          Text(
+            amount,
+            style: const TextStyle(
+              color: Color(0xFF183B48),
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 5),
+          Text(
+            percentage,
+            style: const TextStyle(
+              color: Color(0xFF159A91),
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
