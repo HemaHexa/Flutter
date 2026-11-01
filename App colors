@@ -1,0 +1,53 @@
+
+import 'package:flutter/material.dart';
+
+class AppColors {
+  AppColors._();
+
+  // Main backgrounds
+  static const Color white = Color(0xFFFFFFFF);
+  static const Color background = Color(0xFFF4F8F9);
+  static const Color surface = Color(0xFFFFFFFF);
+  static const Color mist = Color(0xFFEAF3F4);
+
+  // Ocean Luxe primary colors
+  static const Color navy = Color(0xFF183B48);
+  static const Color deepNavy = Color(0xFF102D39);
+  static const Color teal = Color(0xFF159A91);
+  static const Color seafoam = Color(0xFFA6DCD5);
+  static const Color lightTeal = Color(0xFFE1F4F1);
+
+  // Text colors
+  static const Color primaryText = Color(0xFF183B48);
+  static const Color secondaryText = Color(0xFF65758B);
+  static const Color mutedText = Color(0xFF9AA8B5);
+
+  // Financial indicators
+  static const Color positive = Color(0xFF199B70);
+  static const Color negative = Color(0xFFE36B68);
+  static const Color warning = Color(0xFFE9A23B);
+
+  // UI elements
+  static const Color border = Color(0xFFE5ECEF);
+  static const Color divider = Color(0xFFEDF1F3);
+
+  // Gradients
+  static const LinearGradient oceanGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFFFFFFFF),
+      Color(0xFFF0F8F8),
+      Color(0xFFE1F4F1),
+    ],
+  );
+
+  static const LinearGradient tealGradient = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFF159A91),
+      Color(0xFF247B83),
+    ],
+  );
+}
