@@ -1,3 +1,12 @@
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" -s emulator-5554 shell getprop sys.boot_completed
+1
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" -s emulator-5554 shell pm list packages         
+cmd: Failure calling service package: Broken pipe (32)
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" -s emulator-5554 shell service check package    
+Service package: found
+PS C:\FlutterProjects\investmate> 
+
+
 PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" version
 Android Debug Bridge version 1.0.41
 Version 37.0.1-15733141
