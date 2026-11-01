@@ -55,3 +55,66 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 Running Gradle task 'assembleDebug'...                              5.8s
 Error: Gradle task assembleDebug failed with exit code 1
 PS C:\FlutterProjects\investmate> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\FlutterProjects\investmate> $content = Get-Content $file -Raw                                                   
+PS C:\FlutterProjects\investmate> $content = $content -replace '(?m)^distributionUrl=.*$', "distributionUrl=$zipUrl"  
+PS C:\FlutterProjects\investmate> Set-Content -Path $file -Value $content -NoNewLine                                
+PS C:\FlutterProjects\investmate> Get-Content $file                                                                   
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=file:///C:/Users/2000209446/Downloads/gradle-9.3.1-all.zip
+PS C:\FlutterProjects\investmate> flutter run -d emulator-5554                                                      
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/2000209446/.gradle/wrapper/dists/gradle-9.3.1-all/5rhaihjnf6vskz2q8rx0eetfc/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                            178.3s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...        2,423ms
+I/FlutterActivityAndFragmentDelegate(12898): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI(12898): Beginning load of flutter...
+D/FlutterJNI(12898): flutter (null) was loaded normally!
+I/flutter (12898): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer(12898): Width is zero. 0,0
+D/FlutterRenderer(12898): Width is zero. 0,0
+D/FlutterRenderer(12898): Width is zero. 0,0
+D/FlutterRenderer(12898): Width is zero. 0,0
+D/FlutterJNI(12898): Sending viewport metrics to the engine.
+Syncing files to device sdk gphone64 x86 64...                     415ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:65462/nnbJy_Qayl8=/
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at:
+http://127.0.0.1:65462/nnbJy_Qayl8=/devtools/?uri=ws://127.0.0.1:65462/nnbJy_Qayl8=/ws
+I/Choreographer(12898): Skipped 242 frames!  The application may be doing too much work on its main thread.
+F/crash_dump64(13088): crash_dump.cpp:666] failed to attach to thread 317: Permission denied
