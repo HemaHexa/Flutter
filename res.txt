@@ -81,3 +81,154 @@ D/FlutterJNI( 9884): Sending viewport metrics to the engine.
 D/WindowLayoutComponentImpl( 9884): Register WindowLayoutInfoListener on Context=com.example.flutter_application_1.MainActivity@edf027a, of which baseContext=android.app.ContextImpl@e3a7e07
 D/FlutterJNI( 9884): Sending viewport metrics to the engine.
 I/HWUI    ( 9884): Davey! duration=938ms; Flags=1, FrameTimelineVsyncId=45810, IntendedVsync=8319108478360, Vsync=8319208478356, InputEventId=0, HandleInputStart=8319219102400, AnimationStart=8319220349000, PerformTraversalsStart=8319220477100, DrawStart=8319234998200, FrameDeadline=8319125145026, FrameStartTime=8319215958500, FrameInterval=16666666, WorkloadTarget=16666666, AnimationTime=8319208478356, SyncQueued=8319253318500, SyncStart=8319256351300, IssueDrawCommandsStart=8319260949500, SwapBuffers=8319377509600, FrameCompleted=8320050485100, DequeueBufferDuration=25675100, QueueBufferDuration=1035500, GpuCompleted=8320047567300, SwapBuffersCompleted=8320050485100, DisplayPresentTime=0, CommandSubmissionCompleted=8319377509600, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\FlutterProjects\investmate> flutter run -d emulator-5554
+
+┌─────────────────────────────────────────────────────────┐
+│ A new version of Flutter is available!                  │
+│                                                         │
+│ To update to the latest version, run "flutter upgrade". │
+└─────────────────────────────────────────────────────────┘
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/2000209446/.gradle/wrapper/dists/gradle-9.3.1-all/5rhaihjnf6vskz2q8rx0eetfc/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                             29.5s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           5.7s
+I/FlutterActivityAndFragmentDelegate( 4896): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI( 4896): Beginning load of flutter...
+D/FlutterJNI( 4896): flutter (null) was loaded normally!
+I/flutter ( 4896): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 4896): Width is zero. 0,0
+Syncing files to device sdk gphone64 x86 64...                     160ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:62950/H2qhhnxyM_c=/
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at:
+http://127.0.0.1:62950/H2qhhnxyM_c=/devtools/?uri=ws://127.0.0.1:62950/H2qhhnxyM_c=/ws
+D/ProfileInstaller( 4896): Installing profile for com.example.investmate
+I/Choreographer( 4896): Skipped 295 frames!  The application may be doing too much work on its main thread.
+D/WindowOnBackDispatcher( 4896): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@6fbe165
+I/WindowExtensionsImpl( 4896): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils( 4896): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@c238217, of which baseContext=android.app.ContextImpl@76582af
+I/mple.investmate( 4896): Compiler allocated 5250KB to compile void android.view.ViewRootImpl.performTraversals(long)
+D/VRI[MainActivity]( 4896): WindowInsets changed: 1080x2400 statusBars:[0,132,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,164,0,84] 
+D/FlutterRenderer( 4896): Width is zero. 0,0
+I/Surface ( 4896): Creating surface for consumer unnamed-4896-0 with slotExpansion=1 for 64 slots
+I/Surface ( 4896): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI( 4896): Sending viewport metrics to the engine.
+I/Surface ( 4896): Creating surface for consumer unnamed-4896-1 with slotExpansion=1 for 64 slots
+I/Surface ( 4896): Creating surface for consumer ea8b1c1 SurfaceView[com.example.investmate/com.example.investmate.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/Choreographer( 4896): Skipped 135 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI( 4896): Sending viewport metrics to the engine.
+D/WindowLayoutComponentImpl( 4896): Register WindowLayoutInfoListener on Context=com.example.investmate.MainActivity@2109154, of which baseContext=android.app.ContextImpl@5d0033e
+D/FlutterJNI( 4896): Sending viewport metrics to the engine.
+D/InsetsController( 4896): hide(ime())
+I/ImeTracker( 4896): com.example.investmate:b705f7f5: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PS C:\FlutterProjects\investmate> flutter run -d emulator-5554
+
+┌─────────────────────────────────────────────────────────┐
+│ A new version of Flutter is available!                  │
+│                                                         │
+│ To update to the latest version, run "flutter upgrade". │
+└─────────────────────────────────────────────────────────┘
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/2000209446/.gradle/wrapper/dists/gradle-9.3.1-all/5rhaihjnf6vskz2q8rx0eetfc/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                             29.5s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           5.7s
+I/FlutterActivityAndFragmentDelegate( 4896): If you are attempting to set --enable-dart-profiling via Intent extras to launch a Flutter component outside of using the Flutter CLI, note that support for setting engine flags on Android via Intent will soon be dropped; see https://github.com/flutter/flutter/issues/180686 for more information on this breaking change. To migrate, set --enable-dart-profiling or any other flags specified via Intent extras on the command line instead or see https://github.com/flutter/flutter/blob/main/docs/engine/Flutter-Android-Engine-Flags.md for alternative methods.
+D/FlutterJNI( 4896): Beginning load of flutter...
+D/FlutterJNI( 4896): flutter (null) was loaded normally!
+I/flutter ( 4896): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(104)] Using the Impeller rendering backend (OpenGLES).
+D/FlutterRenderer( 4896): Width is zero. 0,0
+Syncing files to device sdk gphone64 x86 64...                     160ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:62950/H2qhhnxyM_c=/
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at:
+http://127.0.0.1:62950/H2qhhnxyM_c=/devtools/?uri=ws://127.0.0.1:62950/H2qhhnxyM_c=/ws
+D/ProfileInstaller( 4896): Installing profile for com.example.investmate
+I/Choreographer( 4896): Skipped 295 frames!  The application may be doing too much work on its main thread.
+D/WindowOnBackDispatcher( 4896): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@6fbe165
+I/WindowExtensionsImpl( 4896): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils( 4896): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@c238217, of which baseContext=android.app.ContextImpl@76582af
+I/mple.investmate( 4896): Compiler allocated 5250KB to compile void android.view.ViewRootImpl.performTraversals(long)
+D/VRI[MainActivity]( 4896): WindowInsets changed: 1080x2400 statusBars:[0,132,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,164,0,84] 
+D/FlutterRenderer( 4896): Width is zero. 0,0
+I/Surface ( 4896): Creating surface for consumer unnamed-4896-0 with slotExpansion=1 for 64 slots
+I/Surface ( 4896): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI( 4896): Sending viewport metrics to the engine.
+I/Surface ( 4896): Creating surface for consumer unnamed-4896-1 with slotExpansion=1 for 64 slots
+I/Surface ( 4896): Creating surface for consumer ea8b1c1 SurfaceView[com.example.investmate/com.example.investmate.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/Choreographer( 4896): Skipped 135 frames!  The application may be doing too much work on its main thread.
+D/FlutterJNI( 4896): Sending viewport metrics to the engine.
+D/WindowLayoutComponentImpl( 4896): Register WindowLayoutInfoListener on Context=com.example.investmate.MainActivity@2109154, of which baseContext=android.app.ContextImpl@5d0033e
+D/FlutterJNI( 4896): Sending viewport metrics to the engine.
+D/InsetsController( 4896): hide(ime())
+I/ImeTracker( 4896): com.example.investmate:b705f7f5: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+
+
+
+
+
