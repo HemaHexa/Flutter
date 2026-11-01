@@ -1,3 +1,40 @@
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" version
+Android Debug Bridge version 1.0.41
+Version 37.0.1-15733141
+Installed as C:\Users\2000209446\AppData\Local\Android\Sdk\platform-tools\adb.exe
+Running on Windows 10.0.26200
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" kill-server
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" start-server
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" devices     
+List of devices attached
+
+PS C:\FlutterProjects\investmate> & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" devices
+List of devices attached
+emulator-5554   device
+
+PS C:\FlutterProjects\investmate> flutter run -d emulator-5554
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/2000209446/.gradle/wrapper/dists/gradle-9.3.1-all/5rhaihjnf6vskz2q8rx0eetfc/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                             21.3s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...        1,609ms
+Error: ADB exited with exit code 1
+Performing Streamed Install
+
+adb.exe: failed to install C:\FlutterProjects\investmate\build\app\outputs\flutter-apk\app-debug.apk: cmd: Failure calling service package:
+Broken pipe (32)
+Error launching application on sdk gphone64 x86 64.
+PS C:\FlutterProjects\investmate> 
+
+
+
+
+
+
 PS C:\FlutterProjects\flutter_application_1> flutter run
 Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
 Exception in thread "main" javax.net.ssl.SSLHandshakeException: (certificate_unknown) PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
